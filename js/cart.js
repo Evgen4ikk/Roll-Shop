@@ -3,6 +3,7 @@ const cartWrapper = document.querySelector('.cart-wrapper');
 window.addEventListener('click', (event) =>{
     if (event.target.hasAttribute('data-cart')) {
 
+
         const card = event.target.closest('.card');
 
         const productInfo = {
@@ -53,8 +54,12 @@ window.addEventListener('click', (event) =>{
 							</div>`;
 
         cartWrapper.insertAdjacentHTML('beforeend', cartItemHTML)
+
+		
 		}
 
 		card.querySelector('[data-counter]').innerText = '1';
+		toggleCartStatus();
+		calcCartPriceAndDelivery();
     }
 })

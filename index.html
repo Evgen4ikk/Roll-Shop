@@ -23,126 +23,8 @@
 
 	<div class="container mb-5">
 		<div class="row">
-			<div class="col-md-8">
-				<div class="row">
-
-					<!-- Ролл -->
-					<div class="col-md-6">
-						<div class="card mb-4" data-id="01">
-							<img class="product-img" src="img/roll/philadelphia.jpg" alt="">
-							<div class="card-body text-center">
-								<h4 class="item-title">Филадельфия хит ролл</h4>
-								<p><small data-items-in-box class="text-muted">6 шт.</small></p>
-
-								<div class="details-wrapper">
-									<div class="items counter-wrapper">
-										<div class="items__control" data-action="minus">-</div>
-										<div class="items__current" data-counter>1</div>
-										<div class="items__control" data-action="plus">+</div>
-									</div>
-
-									<div class="price">
-										<div class="price__weight">180г.</div>
-										<div class="price__currency">300 ₽</div>
-									</div>
-								</div>
-
-								<button data-cart type="button" class="btn btn-block btn-outline-warning">+ в корзину</button>
-
-							</div>
-						</div>
-					</div>
-					<!-- // Ролл -->
-
-					<!-- Ролл -->
-					<div class="col-md-6">
-						<div class="card mb-4" data-id="02">
-							<img class="product-img" src="img/roll/california-tempura.jpg" alt="">
-							<div class="card-body text-center">
-								<h4 class="item-title">Калифорния темпура</h4>
-								<p><small data-items-in-box class="text-muted">6 шт.</small></p>
-
-								<div class="details-wrapper">
-									<div class="items counter-wrapper">
-										<div class="items__control" data-action="minus">-</div>
-										<div class="items__current" data-counter>1</div>
-										<div class="items__control" data-action="plus">+</div>
-									</div>
-
-									<div class="price">
-										<div class="price__weight">205г.</div>
-										<div class="price__currency">250 ₽</div>
-									</div>
-								</div>
-
-								<button data-cart type="button" class="btn btn-block btn-outline-warning">+ в корзину</button>
-
-							</div>
-						</div>
-					</div>
-					<!-- // Ролл -->
-
-					<!-- Ролл -->
-					<div class="col-md-6">
-						<div class="card mb-4" data-id="03">
-							<img class="product-img" src="img/roll/zapech-california.jpg" alt="">
-							<div class="card-body text-center">
-								<h4 class="item-title">Запеченый ролл «Калифорния»</h4>
-								<p><small data-items-in-box class="text-muted">6 шт.</small></p>
-
-								<div class="details-wrapper">
-									<div class="items counter-wrapper">
-										<div class="items__control" data-action="minus">-</div>
-										<div class="items__current" data-counter>1</div>
-										<div class="items__control" data-action="plus">+</div>
-									</div>
-
-									<div class="price">
-										<div class="price__weight">182г.</div>
-										<div class="price__currency">230 ₽</div>
-									</div>
-
-								</div>
-
-								<button data-cart type="button" class="btn btn-block btn-outline-warning">+ в корзину</button>
-
-							</div>
-						</div>
-					</div>
-					<!-- // Ролл -->
-
-					<!-- Ролл -->
-					<div class="col-md-6">
-						<div class="card mb-4" data-id="04">
-							<img class="product-img" src="img/roll/philadelphia.jpg" alt="">
-							<div class="card-body text-center">
-								<h4 class="item-title">Филадельфия</h4>
-								<p><small data-items-in-box class="text-muted">6 шт.</small></p>
-
-								<div class="details-wrapper">
-									<div class="items counter-wrapper">
-										<div class="items__control" data-action="minus">-</div>
-										<div class="items__current" data-counter>1</div>
-										<div class="items__control" data-action="plus">+</div>
-									</div>
-
-									<div class="price">
-										<div class="price__weight">230г.</div>
-										<div class="price__currency">320 ₽</div>
-									</div>
-
-								</div>
-
-								<button data-cart type="button" class="btn btn-block btn-outline-warning">
-									+ в корзину
-								</button>
-
-							</div>
-						</div>
-					</div>
-					<!-- // Ролл -->
-
-				</div>
+			<div class="col-md-8" >
+				<div class="row" id="products-container"></div>
 			</div>
 			<div class="col-md-4">
 
@@ -166,8 +48,16 @@
 
 						<!-- Стоимость заказа -->
 						<div class="cart-total">
-							<p><span class="h5">Доставка:</span> <span class="delivery-cost free">бесплатно</span> </p>
-							<p><span class="h5">Итого:</span> <span class="total-price">330</span> <span class="rouble">₽</span></p>
+							<p data-cart-delivery class="none">
+								<span class="h5">Доставка:</span> 
+								<span class="delivery-cost free">250 ₽</span><br>
+								<span class="small">Бесплатно при заказе от 600 ₽</span>
+							</p>
+							<p>
+								<span class="h5">Итого:</span> 
+								<span class="total-price">0</span> 
+								<span class="rouble">₽</span>
+							</p>
 						</div>
 						<!-- // Стоимость заказа -->
 
@@ -178,7 +68,16 @@
 						<h5 class="card-title">Оформить заказ</h4>
 						<form>
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Ваш номер телефона">
+								<strong>Номер телефона</strong>
+								<input type="text" class="form-control" placeholder="8 (777) 777-77-77">
+							</div>
+							<div class="form-group">
+								<strong>Имя</strong>
+								<input type="text" class="form-control" placeholder="Евгений">
+							</div>
+							<div class="form-group">
+								<strong>Адерсс</strong>
+								<input type="text" class="form-control" placeholder="Улица,Дом,Квартира">
 							</div>
 							<button type="submit" class="btn btn-primary">Заказать</button>
 						</form>
@@ -194,6 +93,9 @@
 	</div>
 
 	<!-- Подключаем скрипты -->
+	<script src="/js/renderProducts.js"></script>
+	<script src="/js/calcCartPrice.js"></script>
+	<script src="/js/toggleCartStatus.js"></script>
 	<script src="/js/counter.js"></script>
 	<script src="/js/cart.js"></script>
 </body>
