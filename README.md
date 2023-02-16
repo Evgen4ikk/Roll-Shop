@@ -1,3 +1,3 @@
 # Roll-Shop
 
-![Roll-Shop](/preview.png)
+![Roll-shop](/preview.png)
